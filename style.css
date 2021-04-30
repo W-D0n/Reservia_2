@@ -1,0 +1,288 @@
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0|20110126 License:none (public domain) */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, label, select, button,textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    background:none;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/***** Param du site *****/
+*{
+    box-sizing: border-box;
+}
+:root{
+    --virgin-bg-color: white;
+    --subtext-color:#333;
+    --primary-color: #0065fc;
+    --border-color:#d9d9d9;
+    --bg-color:#F2F2F2;
+    --wrapIcon-color:#deebff;
+    --font:"Raleway", "sans-serif";
+    --margMin:0 2rem;
+    --maxW: 1440px;
+}
+
+/***** Param de la page *****/
+body{    
+    line-height: 1;
+    font-family: var(--font);
+    background-color: var(--virgin-bg-color);
+}
+
+.global{
+    margin: auto;
+}
+
+/***** Utility classes *****/
+/*Je comprends pas l'intérêt de cette partie (?) */
+.wrap{
+    max-width: var(--maxW);
+    margin: var(--margMin);
+}
+
+/*********  Menu  ***********/
+.logo{
+    display: flex;
+    width: 10%;
+    box-sizing: border-box;
+}
+.menu{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.links{
+    display:flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.intLinks{
+    display:flex;
+}
+.authLink{
+    display:flex;
+}
+
+.links a{
+    padding: 48px 32px;
+    display: inline-block;
+    color:var(--subtext-color);    
+    border-top: 3px solid transparent;
+    transition: border .1s linear;
+}
+.links a:hover{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/********   Search  **********/
+
+.searchHeader{
+    margin: 1rem 0;
+}
+.searchTitle{
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.searchSubtitle{
+    /* font-size: 1.5vmax; */
+    color:var(--subtext-color);
+}
+
+/*****  Barre de recherche  ****/
+.searchField{
+    display: inline-block;
+    font-weight: bolder;
+    padding: 15px 0;
+    background-color: red;
+}
+.searchIcon{
+    padding: 0 1.5rem;
+    border-radius: 10px 0 0 10px;
+    background:var(--bg-color);
+}
+.inputField{
+    padding: 12px;
+    border: 1px solid var(--bg-color);
+    margin-left: -6px;
+}
+.searchBtn{
+    display: inline-block;
+    padding: 14.5px 13px 14.5px 13px;
+    border-radius: 0 10px 10px 0;
+    color: var(--virgin-bg-color);
+    background-color: var(--primary-color);margin-left: -6px;
+}
+
+/***** Zone de filtres ******/
+.searchFilters{
+    display: flex;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.filtersTitle{
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.filtersButton{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    border: 2px solid var(--border-color);
+    background-color: var(--virgin-bg-color);
+    border-radius: 2rem;
+    font-weight: bold;
+}
+.filtersWrapTitle{
+    margin: 0 1rem;
+}
+
+.filtersButton .filterWrapIcon{
+    display: flex;
+    border-radius: 50%;
+    background-color: var(--wrapIcon-color);
+    height: 3rem;
+    width: 3rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: -2px;
+    color: var(--primary-color);
+}
+/******** Texte information sur les résultats *******/
+.searchResult{
+    display: flex;
+    margin: 1rem 1rem;
+}
+
+.ResultWrapIcon{
+    font-size: 13px;
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: var(--virgin-bg-color);
+    height: 1.5rem;
+    width: 1.5rem;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: var(--primary-color);
+}
+.restultText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**********  Main  *********/
+.main{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 20px;
+    background-color: cornflowerblue;
+}
+/******** Hosts ********/
+.hosts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 1.5rem ;
+    background-color: var(--bg-color);
+}
+img.hostsThumb{
+    width: 10%;
+    height: 100%;
+}
+
+@media screen and (max-width: 700px){
+    .hosts{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px){
+    .hosts{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.hostsThumb{
+     
+    box-sizing: border-box;
+    /*  Pour mettre l'ombre portée de la case ;box-shadow: 60px -16px teal;*/
+    border-radius: 20px;
+    text-align: center;
+    padding: 4px 20px;
+}
+
+.hostsThumb img{
+
+    border-radius: 20px 20px 0 0;
+}
+/******* Fame  *******/
+.fame{
+    display: flex;
+    border-radius: 1.5rem ;
+    background-color: var(--bg-color);
+}
+
+/******** activities ********/
+.activities{
+    display: flex;
+    max-width: 80%;
+    background-color: springgreen;
+}
+
+/********* Foot *********/
+.footer{
+    background-color: var(--bg-color);
+}
+
+
+img{
+    width: 100%;
+}
+
+
+/* Mémo Couleurs :
+  #f2f2f2 pour le gris clair
+  #0065fc pour le bleu des étoiles
+*/
