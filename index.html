@@ -1,373 +1,357 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" sizes="144x144" href="images/logo/R.svg">
-        <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a0526e87eb.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
-        <!-- <style>
-            @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
-        </style>  -->
+    <link rel="icon" sizes="144x144" href="images/logo/R.svg">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a0526e87eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');</style>
 
-        <title>Document</title>
-    </head>
-    <body>
-        <div class="global wrap">
-            <!-- En tête de la page-->
-            <div class="hero wrap">
-                <nav class="menu">
-                    <a href="index.html" class="logo" title="vers la partie des résultats de recherche"><img src="images/logo/Reservia.svg" alt="Reservia logo"></a>
-                    <div class="links">
-                        <ul class="intLinks">
-                            <li>
-                                <a href="#hosts" title="vers la partie des résultats de recherche"><span>Hébergements</span></a>
-                            </li>
-                            <li>
-                                <a href="#activities" title="vers la partie des activités autour de la zone de recherche"><span>Activités</span></a>
-                            </li>
-                        </ul>
-                        <ul class="authLink">
-                            <li>
-                                <a href="signin.html" title="vers le formulaire d'inscription"><span>S'inscrire</span></a>
-                            </li>
-                        </ul>
-                    </div>                    
-                </nav>
-                <header class="searchHeader">
-                    <h1 class="searchTitle">Trouvez votre hébergement pour des vacances de rêve</h1>
-                    <p class="searchSubtitle">En plein centre de ville ou en pleine nature</p>
+    <title>Reservia</title>
+</head>
+<body>
+    <div class="container">
+        <!-- En tête de la page-->
+        <div class="menu wrap">
+            <a class="logo" href="index.html" title="vers la partie des résultats de recherche"><img src="images/logo/Reservia.svg" alt="Reservia logo"></a>
+            <nav class="navbar">
+                <a class="navlink" href="#hosts" title="vers la partie des résultats de recherche">Hébergement</a>
+                <a class="navlink" href="#activities" title="vers la partie des activités autour de la zone de recherche">Activités</a>
+            </nav>
+            <div class="sign">
+                <a href="signin.html" title="vers le formulaire d'inscription">S'inscrire</a>
+            </div>
+        </div>
+        <div class="search wrap">
+            <header class="searchHeader">
+                <h1 class="searchTitle">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p class="searchSubtitle">En plein centre de ville ou en pleine nature</p>
+            </header>
+            <form class="searchform" action="#" method="GET">
+                    <em class="searchicon fas fa-map-marker-alt searchFormWrapiconIcon"></em> 
+                    <input class="inputfield" type="search" placeholder="Marseille, France">
+                    <button class="searchbtn">Rechercher</button>
+            </form>
+            <div class="searchFilters">
+                    <h3 class="filtersTitle">Filtres</h3>
+                    <button class="filtersButton" name="ecoBtn" type="button">
+                        <em class="fas fa-money-bill-wave filterWrapIcon"></em> <span class="filtersWrapTitle">Économique</span> 
+                    </button>
+                    <button class="filtersButton" name="familiyBtn WrapIcon" type="button">
+                        <em class="fas fa-child filterWrapIcon"></em> <span class="filtersWrapTitle">Familial</span>
+                    </button>
+                    <button class="filtersButton" name="romanceBtn" type="button">
+                        <em class="fas fa-heart filterWrapIcon"></em> <span class="filtersWrapTitle">Romantique</span>
+                    </button>
+                    <button class="filtersButton" name="PetBtn" type="button">
+                        <em class="fas fa-dog filterWrapIcon"></em> <span class="filtersWrapTitle">Animaux autorisés</span>
+                    </button>
+            </div>
+            <div class="searchResult">
+                <em class="fas fa-info ResultWrapIcon"></em> 
+                <p class="restultText">Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </div>
+        <!-- PARTIE Hébergements + Populaires + Activités-->
+        <div class="main wrap">
+            <div class="host">
+                <header class="headertitle">
+                    <h2 class="title">Hébergements à Marseille</h2>
                 </header>
-                <div class="search">
-                    <form class="searchField" action="#" method="GET">
-                            <label>
-                                <i class="searchIcon fas fa-map-marker-alt searchFormWrapiconIcon"></i>
-                                <input class="inputField" type="search" placeholder="Marseille, France">
-                            </label>
-                            <button class="searchBtn">Rechercher</button>
-                    </form>
-                </div>
-                    <div class="searchFilters">
-                        <h3 class="filtersTitle">Filtres</h3>
-                        <button class="filtersButton" name="ecoBtn" type="button">
-                            <i class="fas fa-money-bill-wave filterWrapIcon"></i><span class="filtersWrapTitle">Économique</span> 
-                        </button>
-                        <button class="filtersButton" name="familiyBtn WrapIcon" type="button">
-                            <i class="fas fa-child filterWrapIcon"></i><span class="filtersWrapTitle">Familial</span>
-                        </button>
-                        <button class="filtersButton" name="romanceBtn" type="button">
-                            <i class="fas fa-heart filterWrapIcon"></i><span class="filtersWrapTitle">Romantique</span>
-                        </button>
-                        <button class="filtersButton" name="PetBtn" type="button">
-                            <i class="fas fa-dog filterWrapIcon"></i><span class="filtersWrapTitle">Animaux autorisés</span>
-                        </button>
-                    </div>
-                    <div class="searchResult">
-                        <i class="fas fa-info ResultWrapIcon"></i>
-                        <p class="restultText">Plus de 500 logements sont disponibles dans cette ville</p>
-                    </div>
+                <article class="card">
+                    <a href="">
+                        <figure class="hostfigure">
+                            <img src="images/hosts/marcus-loke.jpg" alt="" class="hostimage">
+                                <figcaption class="caption">
+                                    <h3 class="name">Auberge la Cannebière</h3>
+                                    <p class="description">Nuit à partir de 
+                                        <em class="tarif">25€</em>
+                                        <div class="rate">
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="false"></em>
+                                        </div>
+                                    </p>
+                                </figcaption>
+                            </img>
+                        </figure>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="">
+                        <figure class="hostfigure">
+                            <img src="images/hosts/fred-kleber.jpg" alt="" class="hostimage">
+                                <figcaption class="caption">
+                                    <h3 class="name">Hôtel du port</h3>
+                                    <p class="description">Nuit à partir de 
+                                        <em class="tarif">52€</em>
+                                        <div class="rate">
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                        </div>
+                                    </p>
+                                </figcaption>
+                            </img>
+                        </figure>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="">
+                        <figure class="hostfigure">
+                            <img src="images/hosts/reisetopia.jpg" alt="" class="hostimage">
+                                <figcaption class="caption">
+                                    <h3 class="name">Auberge la Cannebière</h3>
+                                    <p class="description">Nuit à partir de 
+                                        <em class="tarif">25€</em>
+                                        <div class="rate">
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="false"></em>
+                                        </div>
+                                    </p>
+                                </figcaption>
+                            </img>
+                        </figure>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="">
+                        <figure class="hostfigure">
+                            <img src="images/hosts/annie-spratt.jpg" alt="" class="hostimage">
+                                <figcaption class="caption">
+                                    <h3 class="name">Auberge la Cannebière</h3>
+                                    <p class="description">Nuit à partir de 
+                                        <em class="tarif">25€</em>
+                                        <div class="rate">
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="false"></em>
+                                        </div>
+                                    </p>
+                                </figcaption>
+                            </img>
+                        </figure>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="">
+                        <figure class="hostfigure">
+                            <img src="images/hosts/nicate-lee.jpg" alt="" class="hostimage">
+                                <figcaption class="caption">
+                                    <h3 class="name">Auberge la Cannebière</h3>
+                                    <p class="description">Nuit à partir de 
+                                        <em class="tarif">25€</em>
+                                        <div class="rate">
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="false"></em>
+                                        </div>
+                                    </p>
+                                </figcaption>
+                            </img>
+                        </figure>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="">
+                        <figure class="hostfigure">
+                            <img src="images/hosts/febrian-zakaria-M.jpg" alt="" class="hostimage">
+                                <figcaption class="caption">
+                                    <h3 class="name">Auberge la Cannebière</h3>
+                                    <p class="description">Nuit à partir de 
+                                        <em class="tarif">25€</em>
+                                        <div class="rate">
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="true"></em>
+                                            <em class="fas fa-star staricon" data-active="false"></em>
+                                        </div>
+                                    </p>
+                                </figcaption>
+                            </img>
+                        </figure>
+                    </a>
+                </article>                    
+                <a href="#" class="more">Afficher plus</a>                               
             </div>
-            <!-- PARTIE Hébergements + Populaires + Activités-->
-            <div class="main wrap">
-            <!-- Présentation des hébergements-->
-                <div class="hosting">
-                    <div class="hosts">
-                        <div class="hostsHead">
-                            <h2 class="hostsTitle">Hébergements à Marseille</h2>
-                        </div>
-                        <div class="hostsThumb">
-                            <a href="#">
-                                <figure class="hostsThumb">
-                                    <img src="images/hosts/marcus-loke.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle">Auberge la Cannebière</h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
+            <div class="fame">
+                <header class="headertitle">
+                    <h2 class="title">Les plus populaires</h2>
+                    <em class="fas fa-chart-line"></em>
+                </header>
+                <aside class="popular">
+                    <article class="pop">
+                        <a href="#" class="popcard">
+                            <div class="popularimage">
+                                <img class="popularimg" src="images/hosts/emile-guillemot.jpg" alt="Avatar">
+                            </div>
+                            <div class="popularcontent">
+                                <div class="text">
+                                    <h3 class="name">Hôtel Le soleil du matin</h3>
+                                    <p class="description">Nuit à partir de <em class="tarif">128€</em></p>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="hostsThumb">
-                            <a href="#">
-                                <figure class="hostsThumb">
-                                    <img src="images/hosts/fred-kleber.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
+                                <div class="rate">
+                                <em class="fas fa-star staricon" data-active="true"></em>
+                                <em class="fas fa-star staricon" data-active="true"></em>
+                                <em class="fas fa-star staricon" data-active="true" aria-hidden="true"></em>
+                                <em class="fas fa-star staricon" data-active="true" aria-hidden="true"></em>
+                                <i class="fas fa-star staricon" data-active="false" aria-hidden="true"></i>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="hostsThumb">
-                            <a href="#">
-                                <figure class="hostsThumb">
-                                    <img src="images/hosts/reisetopia.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
+                            </div>
+                        </a>      
+                    </article>
+                    <article class="pop">
+                        <a href="#" class="popcard">
+                            <div class="popularimage">
+                                <img class="popularimg" src="images/hosts/aw-creative.jpg" alt="Avatar">
+                            </div>
+                            <div class="popularcontent">
+                                <div class="text">
+                                    <h3 class="name">Au coeur de l'eau Chambres d'hôtes</h3>
+                                    <p class="description">Nuit à partir de <em class="tarif">71€</em></p>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="hostsThumb">
-                            <a href="#">
-                                <figure class="hostsThumb">
-                                    <img src="images/hosts/annie-spratt.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
+                                <div class="rate">
+                                <em class="fas fa-star staricon" data-active="true"></em>
+                                <em class="fas fa-star staricon" data-active="true"></em>
+                                <em class="fas fa-star staricon" data-active="true" aria-hidden="true"></em>
+                                <em class="fas fa-star staricon" data-active="true" aria-hidden="true"></em>
+                                <i class="fas fa-star staricon" data-active="false" aria-hidden="true"></i>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="hostsThumb">
-                            <a href="#">
-                                <figure class="hostsThumb">
-                                   <img src="images/hosts/nicate-lee.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
+                            </div>
+                        </a>      
+                    </article>
+                    <article class="pop">
+                        <a href="#" class="popcard">
+                            <div class="popularimage">
+                                <img class="popularimg" src="images/hosts/febrian-zakaria-s.jpg" alt="Avatar">
+                            </div>
+                            <div class="popularcontent">
+                                <div class="text">
+                                    <h3 class="name">Hôtel Tout bleu et Blanc</h3>
+                                    <p class="description">Nuit à partir de <em class="tarif">68€</em></p>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="hostsThumb">
-                            <a href="#">
-                                <figure class="hostsThumb">
-                                    <img src="images/hosts/febrian-zakaria-M.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
+                                <div class="rate">
+                                <em class="fas fa-star staricon" data-active="true"></em>
+                                <em class="fas fa-star staricon" data-active="true"></em>
+                                <em class="fas fa-star staricon" data-active="true" aria-hidden="true"></em>
+                                <em class="fas fa-star staricon" data-active="true" aria-hidden="true"></em>
+                                <i class="fas fa-star staricon" data-active="false" aria-hidden="true"></i>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="hostFoot">
-                            <a href="#"><h4>Afficher plus</h4></a>
-                        </div>                        
-                    </div>
-                </div>
-
-                    <!--Partie Hébergements populaires-->
-                    <div class="fame">
-                        <h2 class="fameTitle">Les plus populaires</h2>
-                        <div class="fameThumb">
-                            <a href="#">
-                                <figure class="fameThumb">
-                                    <img src="images/hosts/emile-guillemot.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fameThumb">
-                            <a href="#">
-                                <figure class="fameThumb">
-                                    <img src="images/hosts/aw-creative.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="fameThumb">
-                            <a href="#">
-                                <figure class="fameThumb">
-                                    <img src="images/hosts/febrian-zakaria-s.jpg" alt="">
-                                    <figcaption>
-                                        <h3 class="thumbTitle"></h3>
-                                    </figcaption>
-                                </figure>
-                                <p class="thumbSubtitle">
-                                    <span class="prices"></span>
-                                </p>
-                                <div class="ratingStars">
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                    <i class="fas fa-star StarIcon"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                
-                    <!--Partie Activités-->
-                <div class="activities">
-                    <div class="activitiesHead">
-                       <h2 class="activitiesTitle">Activités à Marseille</h2> 
-                    </div>                    
-                    <div class="activitiesThumb">
-                        <a href="#">
-                            <figure class="activitiesThumb">
-                                <img src="images/activities/port.jpg" alt="photo du vieux port">
-                                <figcaption>
-                                    <h3 class="thumbTitle">Vieux port</h3>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="activitiesThumb">
-                        <a href="#">
-                            <figure class="activitiesThumb">
-                                <img src="images/activities/fort.jpg" alt="photo du fort de pomègues">
-                                <figcaption>
-                                    <h3 class="thumbTitle">Fort de Pomègues</h3>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="activitiesThumb">
-                        <a href="#">
-                            <figure class="activitiesThumb">
-                                <img src="images/activities/frioul.jpg" alt="photo de l'île du frioul">
-                                <figcaption>
-                                    <h3 class="thumbTitle">Île du Frioul</h3>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="activitiesThumb">
-                        <a href="#">
-                            <figure class="activitiesThumb">
-                                <img src="images/activities/calanques.jpg" alt="photo des calanques">
-                                <figcaption>
-                                    <h3 class="thumbTitle">Parc National des Calanques</h3>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="activitiesThumb">
-                        <a href="#">
-                            <figure class="activitiesThumb">
-                                <img src="images/activities/lagarde.jpg" alt="photo de Notre-dame-de-la-Garde">
-                                <figcaption>
-                                    <h3 class="thumbTitle">Notre-Dame-de-la-Garde</h3>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="activitiesThumb">
-                        <a href="#">
-                            <figure class="activitiesThumb">
-                                <img src="images/activities/longchamp.jpg" alt="photo du parc longchamp">
-                                <figcaption>
-                                    <h3 class="thumbTitle">Parc Longchamp</h3>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
+                            </div>
+                        </a>      
+                    </article>
+                </aside>                
+            </div>            
+        </div>
+        <!--Partie Activités-->
+        <div class="activities wrap">
+            <div class="activitiesHead">
+                <h2 class="activitiesTitle">Activités à Marseille</h2> 
+            </div>                    
+            <div class="activitiesThumb">
+                <a href="#">
+                    <figure class="activitiesThumb">
+                        <img src="images/activities/port.jpg" alt="photo du vieux port">
+                        <figcaption>
+                            <h3 class="thumbTitle">Vieux port</h3>
+                        </figcaption>
+                    </figure>
+                </a>
             </div>
-            <!-- Pied de page-->
-            <div class="footer">
-                <div class="wrap">
-                    <div class="about">
-                        <h3>A propos</h3>
-                        <ul>
-                            <li><a href="#">Fonctionnement du site</a></li>
-                            <li><a href="#">Conditions générales de vente</a></li>
-                            <li><a href="#">Données et confidentialité</a></li>
-                        </ul>
-                    </div>
-                    <div class="ourProducts">
-                        <h3>Nos hébergements</h3>
-                        <ul>
-                            <li><a href="#">Charte qualité</a></li>
-                            <li><a href="#">Soumettre votre choix</a></li>
-                        </ul>
-                    </div>
-                    <div class="assist">
-                        <h3>Assistance</h3>
-                        <ul>
-                            <li><a href="#">Centre d'aide</a></li>
-                            <li><a href="#">Nous contacter</a></li>
-                        </ul>
-                    </div>
+            <div class="activitiesThumb">
+                <a href="#">
+                    <figure class="activitiesThumb">
+                        <img src="images/activities/fort.jpg" alt="photo du fort de pomègues">
+                        <figcaption>
+                            <h3 class="thumbTitle">Fort de Pomègues</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="activitiesThumb">
+                <a href="#">
+                    <figure class="activitiesThumb">
+                        <img src="images/activities/frioul.jpg" alt="photo de l'île du frioul">
+                        <figcaption>
+                            <h3 class="thumbTitle">Île du Frioul</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="activitiesThumb">
+                <a href="#">
+                    <figure class="activitiesThumb">
+                        <img src="images/activities/calanques.jpg" alt="photo des calanques">
+                        <figcaption>
+                            <h3 class="thumbTitle">Parc National des Calanques</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="activitiesThumb">
+                <a href="#">
+                    <figure class="activitiesThumb">
+                        <img src="images/activities/lagarde.jpg" alt="photo de Notre-dame-de-la-Garde">
+                        <figcaption>
+                            <h3 class="thumbTitle">Notre-Dame-de-la-Garde</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="activitiesThumb">
+                <a href="#">
+                    <figure class="activitiesThumb">
+                        <img src="images/activities/longchamp.jpg" alt="photo du parc longchamp">
+                        <figcaption>
+                            <h3 class="thumbTitle">Parc Longchamp</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <!-- Pied de page-->
+        <div class="footer wrap">
+            <div class="wrap">
+                <div class="about">
+                    <h3>A propos</h3>
+                    <ul>
+                        <li><a href="#">Fonctionnement du site</a></li>
+                        <li><a href="#">Conditions générales de vente</a></li>
+                        <li><a href="#">Données et confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="ourProducts">
+                    <h3>Nos hébergements</h3>
+                    <ul>
+                        <li><a href="#">Charte qualité</a></li>
+                        <li><a href="#">Soumettre votre choix</a></li>
+                    </ul>
+                </div>
+                <div class="assist">
+                    <h3>Assistance</h3>
+                    <ul>
+                        <li><a href="#">Centre d'aide</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
