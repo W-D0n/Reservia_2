@@ -58,11 +58,11 @@
         </div>
         <!-- PARTIE Hébergements + Populaires + Activités-->
         <div class="main wrap">
-            <div class="host">
+            <div class="host hostsettings">
                 <header class="headertitle">
                     <h2 class="title">Hébergements à Marseille</h2>
                 </header>
-                <article class="card">
+                <article class="hostcard cardwrapper">
                     <a href="">
                         <figure class="hostfigure">
                             <img src="images/hosts/marcus-loke.jpg" alt="" class="hostimage">
@@ -83,7 +83,7 @@
                         </figure>
                     </a>
                 </article>
-                <article class="card">
+                <article class="hostcard cardwrapper">
                     <a href="">
                         <figure class="hostfigure">
                             <img src="images/hosts/fred-kleber.jpg" alt="" class="hostimage">
@@ -104,7 +104,7 @@
                         </figure>
                     </a>
                 </article>
-                <article class="card">
+                <article class="hostcard cardwrapper">
                     <a href="">
                         <figure class="hostfigure">
                             <img src="images/hosts/reisetopia.jpg" alt="" class="hostimage">
@@ -125,7 +125,7 @@
                         </figure>
                     </a>
                 </article>
-                <article class="card">
+                <article class="hostcard cardwrapper">
                     <a href="">
                         <figure class="hostfigure">
                             <img src="images/hosts/annie-spratt.jpg" alt="" class="hostimage">
@@ -146,7 +146,7 @@
                         </figure>
                     </a>
                 </article>
-                <article class="card">
+                <article class="hostcard cardwrapper">
                     <a href="">
                         <figure class="hostfigure">
                             <img src="images/hosts/nicate-lee.jpg" alt="" class="hostimage">
@@ -167,7 +167,7 @@
                         </figure>
                     </a>
                 </article>
-                <article class="card">
+                <article class="hostcard cardwrapper">
                     <a href="">
                         <figure class="hostfigure">
                             <img src="images/hosts/febrian-zakaria-M.jpg" alt="" class="hostimage">
@@ -188,19 +188,19 @@
                         </figure>
                     </a>
                 </article>                    
-                <a href="#" class="more">Afficher plus</a>                               
+                <a href="#" class="moreinfo">Afficher plus</a>                               
             </div>
-            <div class="fame">
-                <header class="headertitle">
+            <aside class="popular hostsettings">
+                <header class="fametitle headertitle">
                     <h2 class="title">Les plus populaires</h2>
                     <em class="fas fa-chart-line"></em>
-                </header>
-                <aside class="popular">
-                    <article class="pop">
+                </header>                
+                    <article class="popcard cardwrapper">
                         <a href="#" class="popcard">
-                            <div class="popularimage">
-                                <img class="popularimg" src="images/hosts/emile-guillemot.jpg" alt="Avatar">
-                            </div>
+                            <!-- <div class="popularimage">
+                                
+                            </div> -->
+                            <img class="popularimg" src="images/hosts/emile-guillemot.jpg" alt="Avatar">
                             <div class="popularcontent">
                                 <div class="text">
                                     <h3 class="name">Hôtel Le soleil du matin</h3>
@@ -216,11 +216,9 @@
                             </div>
                         </a>      
                     </article>
-                    <article class="pop">
+                    <article class="popcard cardwrapper">
                         <a href="#" class="popcard">
-                            <div class="popularimage">
-                                <img class="popularimg" src="images/hosts/aw-creative.jpg" alt="Avatar">
-                            </div>
+                            <img class="popularimg" src="images/hosts/aw-creative.jpg" alt="Avatar">
                             <div class="popularcontent">
                                 <div class="text">
                                     <h3 class="name">Au coeur de l'eau Chambres d'hôtes</h3>
@@ -236,11 +234,9 @@
                             </div>
                         </a>      
                     </article>
-                    <article class="pop">
+                    <article class="popcard cardwrapper">
                         <a href="#" class="popcard">
-                            <div class="popularimage">
-                                <img class="popularimg" src="images/hosts/febrian-zakaria-s.jpg" alt="Avatar">
-                            </div>
+                            <img class="popularimg" src="images/hosts/febrian-zakaria-s.jpg" alt="Avatar">
                             <div class="popularcontent">
                                 <div class="text">
                                     <h3 class="name">Hôtel Tout bleu et Blanc</h3>
@@ -256,101 +252,7 @@
                             </div>
                         </a>      
                     </article>
-                </aside>                
-            </div>            
-        </div>
-        <!--Partie Activités-->
-        <div class="activities wrap">
-            <div class="activitiesHead">
-                <h2 class="activitiesTitle">Activités à Marseille</h2> 
-            </div>                    
-            <div class="activitiesThumb">
-                <a href="#">
-                    <figure class="activitiesThumb">
-                        <img src="images/activities/port.jpg" alt="photo du vieux port">
-                        <figcaption>
-                            <h3 class="thumbTitle">Vieux port</h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="activitiesThumb">
-                <a href="#">
-                    <figure class="activitiesThumb">
-                        <img src="images/activities/fort.jpg" alt="photo du fort de pomègues">
-                        <figcaption>
-                            <h3 class="thumbTitle">Fort de Pomègues</h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="activitiesThumb">
-                <a href="#">
-                    <figure class="activitiesThumb">
-                        <img src="images/activities/frioul.jpg" alt="photo de l'île du frioul">
-                        <figcaption>
-                            <h3 class="thumbTitle">Île du Frioul</h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="activitiesThumb">
-                <a href="#">
-                    <figure class="activitiesThumb">
-                        <img src="images/activities/calanques.jpg" alt="photo des calanques">
-                        <figcaption>
-                            <h3 class="thumbTitle">Parc National des Calanques</h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="activitiesThumb">
-                <a href="#">
-                    <figure class="activitiesThumb">
-                        <img src="images/activities/lagarde.jpg" alt="photo de Notre-dame-de-la-Garde">
-                        <figcaption>
-                            <h3 class="thumbTitle">Notre-Dame-de-la-Garde</h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="activitiesThumb">
-                <a href="#">
-                    <figure class="activitiesThumb">
-                        <img src="images/activities/longchamp.jpg" alt="photo du parc longchamp">
-                        <figcaption>
-                            <h3 class="thumbTitle">Parc Longchamp</h3>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-        </div>
-        <!-- Pied de page-->
-        <div class="footer wrap">
-            <div class="wrap">
-                <div class="about">
-                    <h3>A propos</h3>
-                    <ul>
-                        <li><a href="#">Fonctionnement du site</a></li>
-                        <li><a href="#">Conditions générales de vente</a></li>
-                        <li><a href="#">Données et confidentialité</a></li>
-                    </ul>
-                </div>
-                <div class="ourProducts">
-                    <h3>Nos hébergements</h3>
-                    <ul>
-                        <li><a href="#">Charte qualité</a></li>
-                        <li><a href="#">Soumettre votre choix</a></li>
-                    </ul>
-                </div>
-                <div class="assist">
-                    <h3>Assistance</h3>
-                    <ul>
-                        <li><a href="#">Centre d'aide</a></li>
-                        <li><a href="#">Nous contacter</a></li>
-                    </ul>
-                </div>
-            </div>
+            </aside>       
         </div>
     </div>
 </body>
