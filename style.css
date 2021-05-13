@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
+
 /* Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0|20110126 License:none (public domain) */
 
@@ -37,6 +40,9 @@ a {
 }
 
 /***** Param du site *****/
+html{
+    line-height: 1.15;
+}
 :root{
     --virgin-bg-color: white;
     --subtext-color:#333;
@@ -103,7 +109,7 @@ body{
 }
 .searchTitle{
     margin-bottom: 0.5rem;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 2rem;
 }
 .searchSubtitle{
@@ -117,8 +123,8 @@ body{
     max-width: var(--maxW);
 }
 .searchicon{
-    padding: 1rem 1.5rem;
-    border-radius: 10px 0 0 10px;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem 0 0 1rem;
     background:var(--bg-color);
 }
 .searchfield{
@@ -132,24 +138,24 @@ body{
 }
 .searchbtn{
     padding: 14.5px 13px 14.5px 13px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 1rem 1rem 0;
     color: var(--virgin-bg-color);
     background-color: var(--primary-color);margin-left: -6px;
 }
 
 /***** Zone de filtres ******/
-.searchFilters{
+.searchfilters{
     display: flex;
     margin: 1rem 0;
     flex-wrap: wrap;
 }
-.filtersTitle{
+.filterstitle{
     display: flex;
     margin-right: 1rem;
     align-items: center;
     font-weight: bold;
 }
-.filtersButton{
+.filtersbutton{
     display: flex;
     align-items: center;
     margin-right: 1rem;
@@ -158,10 +164,10 @@ body{
     border-radius: 2rem;
     font-weight: bold;
 }
-.filtersWrapTitle{
+.filterswraptitle{
     margin: 0 1rem;
 }
-.filtersButton .filterWrapIcon{
+.filtersbutton .filterwrapicon{
     display: flex;
     border-radius: 50%;
     background-color: var(--wrapIcon-color);
@@ -175,11 +181,11 @@ body{
     color: var(--primary-color);
 }
 /******** Texte information sur les résultats *******/
-.searchResult{
+.searchresult{
     display: flex;
-    margin: 1rem 1rem;
+    margin: 1rem 0;
 }
-.ResultWrapIcon{
+.resultwrapicon{
     font-size: 13px;
     display: flex;
     border-radius: 50%;
@@ -191,10 +197,10 @@ body{
     min-width: 1.5rem;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     color: var(--primary-color);
 }
-.restultText{
+.restulttext{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,19 +214,31 @@ body{
     grid-gap: 2rem;
 }
 /********   param communs  **********/
-.hostsettings{
+.sectionsettings{
     display: grid;
     background-color: var(--bg-color);
-    row-gap: 1rem;
+    row-gap: 2rem;
     border-radius: 1.25rem ;
-    padding: 1.5rem;
+    padding: 2rem;
 }
-.headertitle{
+.headtitle{
     grid-column:1/-1;
 }
-.headertitle h2{
-    font-size: 1.5rem;
+.headtitle h2{
+    font-size: 1rem;
     font-weight: bold;
+}
+.name{
+    margin: 0.25rem 0.75rem 0 0.75rem;
+}
+.description{
+    margin:0.1rem 0.75rem 0 0.75rem;
+}
+.name, .monnaie{
+    font-weight: bold;
+}
+.rate{
+    margin: 0.35rem 0.75rem 0 0.75rem;
 }
 /********   Etoiles des notes  **********/
 .staricon[data-active="true"]{
@@ -238,7 +256,6 @@ body{
     transition-duration:0.1s;
     cursor:pointer;
     box-sizing:border-box;
-    height: 100%;
 }
 .cardwrapper:hover{
     transform: scale(1.03);
@@ -246,9 +263,13 @@ body{
 
 /******** Hosts ********/
 .host{    
-    grid-template-columns: repeat(3, 1fr);    
-    grid-template-rows: auto repeat(3, 1fr);
-    column-gap: 2rem;    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto repeat(2, 1fr) auto;
+    column-gap: 2rem;
+}
+.hostcard{
+    width: 100%;
+    max-width: 100%;
 }
 .hostfigure{
     margin: auto;
@@ -256,79 +277,128 @@ body{
 .hostimage{
     height: 7rem;
     object-fit:cover;
-    width:100%;
+    max-width: 100%;
+    width: 100%;
+    max-height:100%;
     border-radius: 1rem 1rem 0 0;
-}
-.name, .tarif{
-    font-weight: bold;
-}
-.description{
-    font-weight: 100;
 }
 .moreinfo{
     grid-column:1/-1;
-    padding:10px;
     font-weight: bold;
 }
 
-.hostcard img{
-    height: 7rem;
-    object-fit: cover;
-    max-width: 100%;
-    width: 100%;
-    max-height:100%;
-    border-radius: 1rem 1rem 0 0;
-}
 /******* Fame  *******/
+.popular{
+    grid-template-rows: auto repeat(3, 1fr);
+}
 .fametitle{
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
 }
-.popular{
-    grid-template-rows:auto repeat(3, 1fr);
-}
-.popcard{
-    display: flex;
-    /* align-items: stretch;
+.popwrap{
+    display:flex;
     height: 100%;
-    overflow: auto; */
 }
-
-.popularimg{
+.popimagecontainer{
+    height: 8rem;
+}
+.popimage{
+    height: 100%;
+    object-fit:cover;
+    max-width: 100%;
+    width: 8rem;
+    max-height:100%;
     border-radius: 1rem 0 0 1rem;
-    width: 33%;
-    height: 100%;
-    object-fit: cover;
 }
-.popularcontent{
+.popcontent{
     display: flex;
     flex-direction: column;
+    width: 50%;
     justify-content: space-between;
-    margin-left: 1rem;
 }
-.text{
-    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
-}
+
 /******** activities ********/
-/* .activities{
+.activitiescontainer{
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:auto 14rem 2rem 2rem 2rem 14rem;
+    margin: 4rem 0;
+}
+#acttitle{
+    margin: 2rem 0;
+}
+.activcontent{
+    padding: 0;
+}
+#activ1{
+    grid-row: 2/7;
+    grid-column: 1/2;
+}
+#activ2{
+    grid-row: 2/5;
+    grid-column: 2/3;
+}
+#activ3{
+    grid-row: 6/7;
+    grid-column: 2/3;
+}
+#activ4{
+    grid-row: 2/7;
+    grid-column: 3/4;
+}
+#activ5{
+    grid-row: 2/3;
+    grid-column: 4/5;
+}
+#activ6{
+    grid-row: 4/7;
+    grid-column: 4/5;
+}
+.activcardimgcontainer{
     display: flex;
-    max-width: 80%;
-    background-color: springgreen;
+    height: 100%;
 }
-.activitiesThumb img{
-    height: 7rem;
-    object-fit: contain;
-    max-width: 100%;
+.activcards{
+    height: 100%;
+}
+.activcardimg{
     width: 100%;
-    max-height:100%;
-    border-radius: 1rem 1rem 0 0;
-} */
-
-/********* Foot *********/
-.footer{
-    background-color: var(--bg-color);
+    height: 85%;
+    object-fit:cover;
+    border-radius: 1.25rem 1.25rem 0 0;
 }
-
+.activcaption{
+    font-weight: bold;
+    margin: 1rem 1rem;
+}
+/********* Foot *********/
+footer{
+    background-color: var(--bg-color);
+    width: 100%;
+    box-sizing: border-box;
+}
+.footwrap{
+    /* display: flex;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+.footwrap>div{
+    padding: 2rem 2rem;
+}
+.foottitle{
+    font-weight: bold;
+    padding: 1rem 0;
+}
+.footlink{
+    display: block;
+    margin: 1rem 0;
+}
 
 
 /* Mémo Couleurs :
