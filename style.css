@@ -288,11 +288,11 @@ body{
     font-weight: bold;
 }
 
-/******* Fame  *******/
+/******* Popular  *******/
 .popular{
     grid-template-rows: auto repeat(3, 1fr);
 }
-.fametitle{
+.poptitle{
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -316,6 +316,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: 8rem;
     justify-content: space-between;
 }
 
@@ -372,7 +373,7 @@ body{
 }
 .activcaption{
     font-weight: bold;
-    margin: 1rem 1rem;
+    margin: 0 1rem;
 }
 /********* Foot *********/
 footer{
@@ -422,6 +423,11 @@ footer{
 }
 
 @media screen and (max-width: 400px){
+    .container{
+        max-width: 390px;
+        margin: auto;
+        padding: 0 1rem;
+    }
     .menu{
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "logo . sign" ;
@@ -439,7 +445,41 @@ footer{
         grid-row: 2/3;
         grid-column: 1/-1;
     }
-    .hosts{
+    .main{
         grid-template-columns: 1fr;
     }
+    .sectionsettings{
+        padding: 1rem;
+    }
+    .host{
+        padding: 0;
+        background-color: var(--virgin-bg-color);
+        grid-template-columns: 1fr;
+        grid-row: 2/3;
+    }
+    .popular{
+        grid-template-columns: 1fr;
+        grid-row: 1/2;
+    }
+    .activitiescontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .activcontent{
+        height: 14rem;
+        margin: 0.5rem 0;
+    }
+    .activcards{
+        height: 95%;
+    }
+    .activcaption{
+        margin: 0.5rem 1rem;
+    }
+    .footwrap{
+        grid-template-columns: 1fr;
+    }
+    .footwrap>div{
+        padding: 1rem 2rem;
+    }
+
 }
