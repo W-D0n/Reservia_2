@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
 
 /* Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0|20110126 License:none (public domain) */
@@ -75,18 +74,19 @@ body{
     align-items: center;
     margin: auto;
     grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: "logo . nav sign";
+    grid-template-areas: "logo . navbar sign";
 }
 .navbar{
     display: flex;
     text-align: center;
-    grid-area: nav;
+    font-weight: 200;
+    grid-area: navbar;
 }
 .navlink{
     padding: 2rem;
-    font-weight: 500;
     border-top: 3px transparent solid;
     transition-duration: 0.1s;
+    font-weight: 500;
 }
 .navlink:hover{
     border-top: 3px var(--primary-color) solid;
@@ -98,7 +98,7 @@ body{
     text-align: center;
     padding: 2rem;
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 800;
 }
 
 /********   Search  **********/
@@ -114,7 +114,7 @@ body{
     font-size: 2rem;
 }
 .searchSubtitle{
-    /* font-size: 1.5vmax; */
+    font-weight: 600;
     color:var(--subtext-color);
 }
 
@@ -137,18 +137,29 @@ body{
     border: 1px solid var(--bg-color);
     margin-left: -6px;
 }
+.searchbtnico{
+    padding: 20px;
+    border-radius: 1rem;
+    color: var(--virgin-bg-color);
+    background-color: var(--primary-color);
+    margin-left: -15px;
+    display: none;
+}
 .searchbtn{
     padding: 14.5px 13px 14.5px 13px;
     border-radius: 0 1rem 1rem 0;
     color: var(--virgin-bg-color);
-    background-color: var(--primary-color);margin-left: -6px;
+    background-color: var(--primary-color);
+    margin-left: -6px;
 }
 
-/***** Zone de filtres ******/
+/***** Filtres ******/
 .searchfilters{
     display: flex;
+    width: 68%;
+    /* justify-content: space-between; */
     margin: 1rem 0;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .filterstitle{
     display: flex;
@@ -159,11 +170,10 @@ body{
 .filtersbutton{
     display: flex;
     align-items: center;
-    margin-right: 1rem;
     border: 2px solid var(--border-color);
     background-color: var(--virgin-bg-color);
     border-radius: 2rem;
-    font-weight: bold;
+    font-weight: 800;
 }
 .filterswraptitle{
     margin: 0 1rem;
@@ -171,17 +181,17 @@ body{
 .filtersbutton .filterwrapicon{
     display: flex;
     border-radius: 50%;
+    margin: 0 0.5rem 0.5rem 0.5rem;
     background-color: var(--wrapIcon-color);
-    height: 3rem;
-    width: 3rem;
-    min-height: 3.5rem;
-    min-width: 3.5rem;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
     margin: -2px;
     color: var(--primary-color);
 }
-/******** Texte information sur les résultats *******/
+/******** Information *******/
 .searchresult{
     display: flex;
     margin: 1rem 0;
@@ -207,7 +217,7 @@ body{
     justify-content: center;
 }
 
-/************* Zone hosts *****************/
+/************* Hosts *****************/
 .main{
     display: grid;    
     box-sizing: border-box;
@@ -239,7 +249,7 @@ body{
     font-weight: bold;
 }
 .rate{
-    margin: 0.35rem 0.75rem 0 0.75rem;
+    margin: 0.35rem 0.75rem 0.25rem 0.75rem;
 }
 /********   Etoiles des notes  **********/
 .staricon[data-active="true"]{
@@ -424,14 +434,16 @@ footer{
 
 @media screen and (max-width: 400px){
     .container{
-        max-width: 390px;
+        max-width: 400px;
         margin: auto;
         padding: 0 1rem;
     }
     .menu{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "logo . sign" ;
-        grid-template-rows: repeat(2, auto);        
+        /* grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "logo . . sign"
+        "navbar navbar navbar navbar" ;
+        grid-template-rows: repeat(2, auto);         */
     }
     .logo{
         grid-row: 1/2;
@@ -439,14 +451,46 @@ footer{
     }
     .sign{
         grid-row: 1/2;
-        grid-column: 3/4;
+        grid-column: 4/5;
     }
     .navbar{
         grid-row: 2/3;
         grid-column: 1/-1;
     }
+    .navlink{
+        padding: 0 2rem 1rem 2rem;
+        border-top: none;
+        border-bottom: 3px transparent solid;
+        transition-duration: 0.1s;
+    }
+    .navlink:hover{
+        border-top: none;
+        border-bottom: 3px var(--primary-color) solid;
+        color: var(--primary-color);
+    }
+    .searchform{
+        width: 100%;
+    }
+    .searchicon{
+        padding:20px 1.3rem 1rem 1.3rem;
+    }
+    .inputfield{
+        max-width: 100%;
+        width: 100%;
+    }
+    .searchTitle{
+        font-weight: 800;
+        font-size: 1.3rem;
+    }
+
     .main{
         grid-template-columns: 1fr;
+    }
+    .searchbtn{
+        display: none;
+    }
+    .searchbtnico{
+        display: inline-block;
     }
     .sectionsettings{
         padding: 1rem;
