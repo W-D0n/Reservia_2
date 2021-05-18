@@ -51,6 +51,8 @@ html{
     --wrapIcon-color:#deebff;
     --font:"Raleway", "sans-serif";
     --maxW: 1440px;
+    --fontwgt1: 800;
+    --fontwgt2: 600;
 }
 body{
     font-family:var(--font);
@@ -98,7 +100,6 @@ body{
     text-align: center;
     padding: 2rem;
     color: var(--primary-color);
-    font-weight: 800;
 }
 
 /********   Search  **********/
@@ -108,13 +109,11 @@ body{
 .searchHeader{
     margin: 1rem 0;
 }
-.searchTitle{
+.searchtitle{
     margin-bottom: 0.5rem;
-    font-weight: bold;
     font-size: 2rem;
 }
 .searchSubtitle{
-    font-weight: 600;
     color:var(--subtext-color);
 }
 
@@ -127,10 +126,6 @@ body{
     padding: 1rem 1.2rem;
     border-radius: 1rem 0 0 1rem;
     background:var(--bg-color);
-}
-.searchfield{
-    font-weight: 600;
-    padding: 15px 0;
 }
 .inputfield{
     padding: 12px;
@@ -156,29 +151,29 @@ body{
 /***** Filtres ******/
 .searchfilters{
     display: flex;
-    width: 68%;
-    /* justify-content: space-between; */
-    margin: 1rem 0;
-    /* flex-wrap: wrap; */
+    margin: 1rem 1rem 1rem 0;
+    flex-wrap: wrap;
 }
 .filterstitle{
     display: flex;
     margin-right: 1rem;
     align-items: center;
-    font-weight: bold;
 }
-.filtersbutton{
+.filtersbtn{
     display: flex;
     align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
     border: 2px solid var(--border-color);
     background-color: var(--virgin-bg-color);
-    border-radius: 2rem;
-    font-weight: 800;
+    cursor: pointer;
+    transition-duration: 0.1s;
 }
 .filterswraptitle{
     margin: 0 1rem;
 }
-.filtersbutton .filterwrapicon{
+.filtersbtn .filterwrapicon{
     display: flex;
     border-radius: 50%;
     margin: 0 0.5rem 0.5rem 0.5rem;
@@ -234,19 +229,21 @@ body{
 }
 .headtitle{
     grid-column:1/-1;
+    font-size: 1.4rem;
 }
-.headtitle h2{
-    font-size: 1rem;
-    font-weight: bold;
+/*Font très grasse*/
+.fontprop1{
+    font-weight: var(--fontwgt1);
+}
+/*Font moins grasse*/
+.fontprop2{
+    font-weight: var(--fontwgt2);
 }
 .name{
     margin: 0.25rem 0.75rem 0 0.75rem;
 }
 .description{
     margin:0.1rem 0.75rem 0 0.75rem;
-}
-.name, .monnaie{
-    font-weight: bold;
 }
 .rate{
     margin: 0.35rem 0.75rem 0.25rem 0.75rem;
@@ -295,7 +292,6 @@ body{
 }
 .moreinfo{
     grid-column:1/-1;
-    font-weight: bold;
 }
 
 /******* Popular  *******/
@@ -305,7 +301,6 @@ body{
 .poptitle{
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
 }
 .popwrap{
     display:flex;
@@ -382,7 +377,6 @@ body{
     border-radius: 1.25rem 1.25rem 0 0;
 }
 .activcaption{
-    font-weight: bold;
     margin: 0 1rem;
 }
 /********* Foot *********/
@@ -404,7 +398,6 @@ footer{
     padding: 2rem 2rem;
 }
 .foottitle{
-    font-weight: bold;
     padding: 1rem 0;
 }
 .footlink{
@@ -412,38 +405,19 @@ footer{
     margin: 1rem 0;
 }
 
-@media screen and (max-width: 800px){
+/* @media screen and (min-device-width: 800px) and (max-device-width: 1280px) {
     .container{
         max-width: 800px;
         margin: auto;
         padding: 0 1rem;
     }
-    .menu{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);        
-    }
-    .hosts{
-        grid-template-columns: repeat(2, 1fr);
-    }
+} */
 
-    .footwrap{
-
-    }
-
-}
-
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
     .container{
-        max-width: 400px;
+        max-width: 500px;
         margin: auto;
         padding: 0 1rem;
-    }
-    .menu{
-        /* grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: 
-        "logo . . sign"
-        "navbar navbar navbar navbar" ;
-        grid-template-rows: repeat(2, auto);         */
     }
     .logo{
         grid-row: 1/2;
@@ -456,12 +430,14 @@ footer{
     .navbar{
         grid-row: 2/3;
         grid-column: 1/-1;
+        max-width: 100%;
     }
     .navlink{
         padding: 0 2rem 1rem 2rem;
         border-top: none;
         border-bottom: 3px transparent solid;
         transition-duration: 0.1s;
+        width: 100%;
     }
     .navlink:hover{
         border-top: none;
@@ -478,13 +454,8 @@ footer{
         max-width: 100%;
         width: 100%;
     }
-    .searchTitle{
-        font-weight: 800;
+    .searchtitle{
         font-size: 1.3rem;
-    }
-
-    .main{
-        grid-template-columns: 1fr;
     }
     .searchbtn{
         display: none;
@@ -492,8 +463,27 @@ footer{
     .searchbtnico{
         display: inline-block;
     }
+    /* .searchfilters{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
+        width: 100%;
+    }*/
+    .filterstitle{
+        width: 100%;
+    }
+    .filtersbtn{
+        margin-right: 0.8rem;
+    }
+    .filterswraptitle{
+        margin: 0 1rem 0 0.5rem;
+        font-size: 0.8em;
+    }
     .sectionsettings{
         padding: 1rem;
+    }
+    .main{
+        grid-template-columns: 1fr;
     }
     .host{
         padding: 0;
