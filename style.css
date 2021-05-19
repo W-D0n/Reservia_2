@@ -52,7 +52,7 @@ html{
     --font:"Raleway", "sans-serif";
     --maxW:1440px;
     --fontwgt1:800;
-    --fontwgt2:600;
+    --fontwgt2:700;
 }
 body{
     font-family:var(--font);
@@ -149,15 +149,13 @@ body{
 }
 
 /***** Filtres ******/
-.searchfilters{
+.filters{
     display: flex;
     margin: 1rem 1rem 1rem 0;
     flex-wrap: wrap;
 }
 .filterstitle{
-    display: flex;
-    margin-right: 1rem;
-    align-items: center;
+    margin: 1rem 1rem 1rem 0;
 }
 .filtersbtn{
     display: flex;
@@ -186,6 +184,7 @@ body{
     margin: -2px;
     color: var(--primary-color);
 }
+
 /******** Information *******/
 .searchresult{
     display: flex;
@@ -219,6 +218,7 @@ body{
     grid-template-columns: 6fr 3fr;
     grid-gap: 2rem;
 }
+
 /********   param communs  **********/
 .sectionsettings{
     display: grid;
@@ -231,6 +231,7 @@ body{
     grid-column:1/-1;
     font-size: 1.4rem;
 }
+
 /*Font très grasse*/
 .fontprop1{
     font-weight: var(--fontwgt1);
@@ -267,7 +268,7 @@ body{
     box-sizing:border-box;
 }
 .cardwrapper:hover{
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 
 /******** Hosts ********/
@@ -331,10 +332,10 @@ body{
     column-gap: 2.5rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:auto 11rem 2rem 2rem 2rem 11rem;
-    margin: 3rem 0 3rem 0;
+    margin: 2.5rem 0 3rem 0;
 }
 .activheader{
-    margin:1.2rem 1.5rem;
+    margin:1.2rem 1.5rem 1rem 0;
 }
 #activ1{
     grid-row: 2/7;
@@ -423,6 +424,10 @@ footer{
         margin: auto;
         padding: 0 1rem;
     }
+    .sectionsettings{
+        padding: 1rem;
+    }
+    /********   Menu  **********/
     .logo{
         grid-row: 1/2;
         grid-column: 1/2;
@@ -448,6 +453,14 @@ footer{
         border-bottom: 3px var(--primary-color) solid;
         color: var(--primary-color);
     }
+    /********   Search  **********/
+    .searchtitle{
+        font-size: 1.3rem;
+    }
+    .searchbtn{
+        display: none;
+    }
+    /*****  Barre de recherche  ****/
     .searchform{
         width: 100%;
     }
@@ -458,28 +471,29 @@ footer{
         max-width: 100%;
         width: 100%;
     }
-    .searchtitle{
-        font-size: 1.3rem;
-    }
-    .searchbtn{
-        display: none;
-    }
     .searchbtnico{
         display: inline-block;
     }
-    .filterstitle{
-        width: 100%;
-    }
     .filtersbtn{
         margin-right: 0.8rem;
+        margin-bottom: 0.5rem;
     }
     .filterswraptitle{
         margin: 0 1rem 0 0.5rem;
         font-size: 0.8em;
     }
-    .sectionsettings{
-        padding: 1rem;
+    /***** Filtres ******/
+    .filterstitle{        
+        display: flex;
+        width: 100%;
     }
+    .resultwrapicon{
+        margin: 0 10px 10px 0;
+    }
+    .restulttext{
+        margin: 5px 0 0 0;
+    }
+    /***** Hosts ******/
     .main{
         grid-template-columns: 1fr;
     }
@@ -488,14 +502,17 @@ footer{
         background-color: var(--virgin-bg-color);
         grid-template-columns: 1fr;
         grid-row: 2/3;
+        row-gap: 1rem;
     }
     .popular{
         grid-template-columns: 1fr;
         grid-row: 1/2;
     }
+    /***** Activities ******/
     .activitiescontainer{
         display: flex;
         flex-direction: column;
+        row-gap: 0.5rem;
     }
     .activcontent{
         height: 12rem;
@@ -504,6 +521,7 @@ footer{
     .activcaption{
         margin: 1rem 1rem;
     }
+    /***** Footer ******/
     .footwrap{
         grid-template-columns: 1fr;
     }
