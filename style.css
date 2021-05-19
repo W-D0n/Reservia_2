@@ -47,12 +47,12 @@ html{
     --subtext-color:#333;
     --primary-color: #0065fc;
     --border-color:#d9d9d9;
-    --bg-color:#F2F2F2;
+    --bg-color:#f2f2f2;
     --wrapIcon-color:#deebff;
     --font:"Raleway", "sans-serif";
-    --maxW: 1440px;
-    --fontwgt1: 800;
-    --fontwgt2: 600;
+    --maxW:1440px;
+    --fontwgt1:800;
+    --fontwgt2:600;
 }
 body{
     font-family:var(--font);
@@ -255,6 +255,7 @@ body{
 .staricon[data-active="false"]{
     color:#d9d9d9;
 }
+
 /********   wrap des cards  **********/
 .cardwrapper{
     background-color: var(--virgin-bg-color);
@@ -324,20 +325,16 @@ body{
     height: 8rem;
     justify-content: space-between;
 }
-
 /******** activities ********/
 .activitiescontainer{
     display: grid;
-    column-gap: 2rem;
+    column-gap: 2.5rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:auto 14rem 2rem 2rem 2rem 14rem;
-    margin: 4rem 0;
+    grid-template-rows:auto 11rem 2rem 2rem 2rem 11rem;
+    margin: 3rem 0 3rem 0;
 }
-#acttitle{
-    margin: 2rem 0;
-}
-.activcontent{
-    padding: 0;
+.activheader{
+    margin:1.2rem 1.5rem;
 }
 #activ1{
     grid-row: 2/7;
@@ -363,27 +360,32 @@ body{
     grid-row: 4/7;
     grid-column: 4/5;
 }
-.activcardimgcontainer{
+.activcontent{
     display: flex;
-    height: 100%;
+    flex-direction: column;
+    max-height: 100%;
+    padding: 0;
 }
-.activcards{
-    height: 100%;
+.activcardimgcontainer{
+    position: relative;
+    flex: 1;
 }
 .activcardimg{
+    position: absolute;
     width: 100%;
-    height: 85%;
-    object-fit:cover;
+    height: 100%;
+    object-fit: cover;
     border-radius: 1.25rem 1.25rem 0 0;
 }
 .activcaption{
-    margin: 0 1rem;
+    margin: 1rem 1.5rem;
 }
+
 /********* Foot *********/
 footer{
+    box-sizing: border-box;
     background-color: var(--bg-color);
     width: 100%;
-    box-sizing: border-box;
 }
 .footwrap{
     /* display: flex;*/
@@ -405,7 +407,8 @@ footer{
     margin: 1rem 0;
 }
 
-/* @media screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+/* Pour tablettes */
+/* @media screen and (min-device-width: 500px) and (max-device-width: 1280px) {
     .container{
         max-width: 800px;
         margin: auto;
@@ -413,7 +416,8 @@ footer{
     }
 } */
 
-@media screen and (max-width: 500px){
+/*Pour mobiles*/
+@media screen /* and (min-width: 320px) */ and (max-width: 500px){
     .container{
         max-width: 500px;
         margin: auto;
@@ -463,12 +467,6 @@ footer{
     .searchbtnico{
         display: inline-block;
     }
-    /* .searchfilters{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(4, auto);
-        width: 100%;
-    }*/
     .filterstitle{
         width: 100%;
     }
@@ -500,14 +498,11 @@ footer{
         flex-direction: column;
     }
     .activcontent{
-        height: 14rem;
+        height: 12rem;
         margin: 0.5rem 0;
     }
-    .activcards{
-        height: 95%;
-    }
     .activcaption{
-        margin: 0.5rem 1rem;
+        margin: 1rem 1rem;
     }
     .footwrap{
         grid-template-columns: 1fr;

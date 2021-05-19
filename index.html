@@ -61,7 +61,7 @@
         <main>
             <section class="main wrap">
             <!-- Hébergements -->
-                <section class="host sectionsettings">
+                <section class="host sectionsettings" id="hosts">
                     <header class="headtitle fontprop1">
                         <h2>Hébergements à Marseille</h2>
                     </header>
@@ -266,58 +266,46 @@
                 </aside>
             </section>        
             <!-- Activités -->
-            <section class="activitiescontainer">
-                <header class="headtitle fontprop1" id="acttitle">
+            <section class="activitiescontainer" id="activities">
+                <header class="headtitle activheader fontprop1" id="activtitle">
                     <h2>Activités à Marseille</h2>
                 </header>
-                <article class="activcontent cardwrapper" id="activ1">
-                    <a class="activcardimgcontainer" href="#activities">
-                        <figure class="activcards">
-                            <img class="activcardimg" src="assets/img/port.jpg" alt="parking de bateaux." />
-                                <figcaption class="activcaption fontprop1">Vieux port</figcaption>
-                        </figure>
-                    </a>
-                </article>
-                <article class="activcontent cardwrapper" id="activ2">
-                    <a class="activcardimgcontainer" href="#activities">
-                        <figure class="activcards">
-                            <img class="activcardimg" src="assets/img/fort.jpg" alt="contre-plongée de la structure du fort." />
-                                <figcaption class="activcaption fontprop1">Fort de Pomègues</figcaption>
-                        </figure>
-                    </a>
-                </article>
-                <article class="activcontent cardwrapper" id="activ3">
-                    <a class="activcardimgcontainer" href="#activities">
-                        <figure class="activcards">
-                            <img class="activcardimg" src="assets/img/frioul.jpg" alt="vue lointaine de l'ile." />
-                                <figcaption class="activcaption fontprop1">Île du Frioul</figcaption>
-                        </figure>
-                    </a>
-                </article>
-                <article class="activcontent cardwrapper" id="activ4">
-                    <a class="activcardimgcontainer" href="#activities">
-                        <figure class="activcards">
-                            <img class="activcardimg" src="assets/img/calanques.jpg" alt="paysage montagneux des cotes" />
-                                <figcaption class="activcaption fontprop1">Parc National des Calanques</figcaption>
-                        </figure>
-                    </a>
-                </article>
-                <article class="activcontent cardwrapper" id="activ5">
-                    <a class="activcardimgcontainer" href="#activities">
-                        <figure class="activcards">
-                            <img class="activcardimg" src="assets/img/lagarde.jpg" alt="Panorama à distance de l'église perchée sur sa colline." />
-                            <figcaption class="activcaption fontprop1">Notre-Dame-de-la-Garde</figcaption>
-                        </figure>
-                    </a>
-                </article>
-                <article class="activcontent cardwrapper" id="activ6">
-                    <a class="activcardimgcontainer" href="#activities">
-                        <figure class="activcards">
-                            <img class="activcardimg" src="assets/img/longchamp.jpg" alt="Vue en contre-plongée d'un bassin et sa fontaine entourés par une structure architecturale." />
-                            <figcaption class="activcaption fontprop1">Parc Longchamp</figcaption>
-                        </figure>
-                    </a>
-                </article>
+                <a class="activcontent cardwrapper" id="activ1" href="#activities">
+                    <div class="activcardimgcontainer">
+                        <img class="activcardimg large" src="assets/img/port.jpg" alt="parking de bateaux." />
+                    </div>
+                    <h3 class="activcaption fontprop1">Vieux port</h3>
+                </a>
+                <a class="activcontent cardwrapper" id="activ2" href="#activities">
+                    <div class="activcardimgcontainer">
+                        <img class="activcardimg medium" src="assets/img/fort.jpg" alt="contre-plongée de la structure du fort." />
+                    </div>
+                    <h3 class="activcaption fontprop1">Fort de Pomègues</h3>
+                </a>
+                <a class="activcontent cardwrapper" id="activ3" href="#activities">
+                    <div class="activcardimgcontainer">
+                        <img class="activcardimg small" src="assets/img/frioul.jpg" alt="vue lointaine de l'ile." />
+                    </div>
+                    <h3 class="activcaption fontprop1">Île du Frioul</h3>
+                </a>
+                <a class="activcontent cardwrapper" id="activ4" href="#activities">
+                    <div class="activcardimgcontainer">
+                        <img class="activcardimg large" src="assets/img/calanques.jpg" alt="paysage montagneux des cotes" />
+                    </div>
+                    <h3 class="activcaption fontprop1">Parc National des Calanques</h3>
+                </a>
+                <a class="activcontent cardwrapper" id="activ5" href="#activities">
+                    <div class="activcardimgcontainer">
+                        <img class="activcardimg small" src="assets/img/lagarde.jpg" alt="Panorama à distance de l'église perchée sur sa colline." />
+                    </div>
+                    <h3 class="activcaption fontprop1">Notre-Dame-de-la-Garde</h3>
+                </a>
+                <a class="activcontent cardwrapper" id="activ6" href="#activities">
+                    <div class="activcardimgcontainer">
+                        <img class="activcardimg medium" src="assets/img/longchamp.jpg" alt="Vue en contre-plongée d'un bassin et sa fontaine entourés par une structure architecturale." />
+                    </div>
+                    <h3 class="activcaption fontprop1">Parc Longchamp</h3>
+                </a>
             </section>
         </main>
     </div>
