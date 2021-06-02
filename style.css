@@ -44,11 +44,11 @@ html{
 :root{
     --virgin-bg-color: white;
     --subtext-color:#333;
-    --primary-color: #0065fc;
+    --primary-color: #0065fc;/* Couleur primaire de la charte */
     --border-color:#d9d9d9;
-    --bg-color:#f2f2f2;
-    --wrapIcon-color:#deebff;
-    --font:"Raleway", "sans-serif";
+    --bg-color:#f2f2f2; /* Gris pour le fond */
+    --wrapIcon-color:#deebff;/*Bleu clair */
+    --font:"Raleway", "sans-serif";/* Police */
     --maxW:1440px;
     --fontwgt1:800;
     --fontwgt2:700;
